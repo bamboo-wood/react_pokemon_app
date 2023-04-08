@@ -2,7 +2,11 @@ import { Pokemon, PokemonDetails } from "../types/pokemon";
 
 export const fetchAllPokemon = async (
   url: string
-): Promise<{ results: Pokemon[] }> => {
+): Promise<{
+  previous: string | null;
+  next: string | null;
+  results: Pokemon[];
+}> => {
   try {
     const response = await fetch(url);
     if (!response.ok) {
