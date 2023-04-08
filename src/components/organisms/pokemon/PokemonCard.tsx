@@ -1,4 +1,5 @@
-import { Pokemon, PokemonDetails } from "../../../types/pokemon";
+import { PokemonDetails } from "../../../types/pokemon";
+import "./PokemonCard.css";
 
 type PokemonCardProps = {
   pokemon: PokemonDetails;
